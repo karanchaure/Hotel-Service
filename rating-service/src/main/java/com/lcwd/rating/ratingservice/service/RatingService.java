@@ -8,7 +8,7 @@ public interface RatingService {
 
     public Rating create(Rating rating);
     public List<Rating> getRatings();
-    public Rating getRatingByUserId(String id);
-    public Rating getRatingByHotelId(String id);
+    public List<Rating> getRatingByUserId(String userId);
+    public List<Rating> getRatingByHotelId(String hotelId);
     
 }

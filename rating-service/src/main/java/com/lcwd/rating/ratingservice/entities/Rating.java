@@ -21,7 +21,7 @@ public class Rating {
     @Id
     private String ratingId;
     private String userId;
-    private String HotelId;
+    private String hotelId;
     private String feedback;
     private int rating;
     

@@ -19,7 +19,7 @@ public class RatingServiceImpl implements RatingService {
     @Override
     public Rating create(Rating rating) {
         String randomUserID = UUID.randomUUID().toString();
-        rating.setUserId(randomUserID);
+        rating.setRatingId(randomUserID);
         return ratingRepository.save(rating);
     }
 
@@ -29,13 +29,13 @@ public class RatingServiceImpl implements RatingService {
     }
 
     @Override
-    public Rating getRatingByUserId(String id) {
-        return (Rating) ratingRepository.findByUserId(id);
+    public List<Rating> getRatingByUserId(String userId) {
+        return ratingRepository.findByUserId(userId);
     }
 
     @Override
-    public Rating getRatingByHotelId(String id) {
-        return (Rating) ratingRepository.findByHotelId(id);
+    public List<Rating> getRatingByHotelId(String hotelId) {
+        return ratingRepository.findByHotelId(hotelId);
     }
     
 }
