@@ -4,9 +4,7 @@ server:
 spring :
     data :
         mongodb : 
-            uri : mongodb://localhost:27017
-            database : microservice
-
+            uri: mongodb://root:koot@localhost:27017/microservice?authSource=admin
     jpa:
       # ddl-auto: create-drop
         ddl-auto: update

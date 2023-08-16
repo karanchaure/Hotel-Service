@@ -3,13 +3,17 @@ package com.lcwd.rating.ratingservice.service.Impl;
 import java.util.List;
 import java.util.UUID;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.lcwd.rating.ratingservice.entities.Rating;
-import com.lcwd.rating.ratingservice.exception.ResourceNotFoundException;
 import com.lcwd.rating.ratingservice.repo.RatingRepository;
 import com.lcwd.rating.ratingservice.service.RatingService;
 
+@Service
 public class RatingServiceImpl implements RatingService {
-
+    
+    @Autowired
     private RatingRepository ratingRepository;
 
     @Override
