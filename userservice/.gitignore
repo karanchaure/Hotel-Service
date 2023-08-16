@@ -6,6 +6,7 @@ target/
 
 ### Project ###
 .mvn
+memory:myDb?cache=shared
 
 ### STS ###
 .apt_generated
