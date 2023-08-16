@@ -1,0 +1,16 @@
+server:
+  port: '9595'
+username: sa
+password: sa
+url: jdbc:sqlite:memory:myDb?cache=shared
+
+hibernate:
+  hbm2ddl:
+    # auto: create-drop
+    auto: update
+  show_sql: 'true'
+driverClassName: org.sqlite.JDBC
+spring:
+  jpa:
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
+
