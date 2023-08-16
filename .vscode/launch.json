@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ServiceRegistryApplication",
+            "request": "launch",
+            "mainClass": "com.lcwd.service.registry.serviceregistry.ServiceRegistryApplication"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-RatingServiceApplication<rating-service>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
