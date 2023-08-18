@@ -1,14 +1,16 @@
 server:
-    port: 9092
+  port: 9092
 
 spring :
-    data :
-        mongodb : 
-            uri: mongodb://root:koot@localhost:27017/microservice?authSource=admin
-    jpa:
+  application:
+    name: RATING-SERVICE
+  data :
+    mongodb : 
+      uri: mongodb://root:koot@localhost:27017/microservice?authSource=admin
+  jpa:
       # ddl-auto: create-drop
-        ddl-auto: update
-        show-sql: true
+    ddl-auto: update
+    show-sql: true
 eureka:
   instance : 
     prefer-ip-address: true
@@ -16,5 +18,5 @@ eureka:
     # fetch-registry: true
     # register-with-eureka: true
     serviceUrl:
-        defaultZone: http://localhost:9090/eureka
+      defaultZone: http://localhost:9090/eureka
     

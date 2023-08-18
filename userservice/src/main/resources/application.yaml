@@ -11,6 +11,8 @@ hibernate:
   show_sql: 'true'
 driverClassName: org.sqlite.JDBC
 spring:
+  application:
+    name: USER-SERVICE
   jpa:
     database-platform: org.hibernate.community.dialect.SQLiteDialect
   
