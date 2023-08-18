@@ -1,2 +1,2 @@
 # Hotel-Service
-Java Microservice
+Java Microservices
