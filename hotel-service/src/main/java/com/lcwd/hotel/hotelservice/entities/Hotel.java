@@ -18,7 +18,7 @@ import lombok.Setter;
 @Builder
 public class Hotel {
     @Id
-    private String Id;
+    private String id;
     private String name;
     private String location;
     private String about;
