@@ -3,7 +3,10 @@ server:
 username: sa
 password: sa
 url: jdbc:sqlite:memory:myDb?cache=shared
-
+logging:
+  level:
+    root : INFO
+    
 hibernate:
   hbm2ddl:
     # auto: create-drop

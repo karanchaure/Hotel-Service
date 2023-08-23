@@ -2,6 +2,7 @@ package com.lcwd.user.service.userservice.enities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -14,16 +15,12 @@ import lombok.ToString;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 @ToString
-public class Rating {
-   
-    private String ratingId;
-    private String userId;
-    private String HotelId;
-    private String feedback;
-    private int rating;
-    private Hotel hotel;
-    
+public class Hotel {
 
+    private String id;
+    private String name;
+    private String location;
+    private String about;
+    
 }
