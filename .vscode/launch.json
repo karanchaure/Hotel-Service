@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ServerConfigApplication",
+            "request": "launch",
+            "mainClass": "com.lcwd.server.config.serverconfig.ServerConfigApplication"
+        },
+        {
+            "type": "java",
             "name": "ServiceRegistryApplication",
             "request": "launch",
             "mainClass": "com.lcwd.service.registry.serviceregistry.ServiceRegistryApplication"
@@ -54,6 +60,16 @@
             "cwd": "${workspaceFolder}",
             "mainClass": "com.lcwd.gateway.gateway.GatewayApplication",
             "projectName": "gateway",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ServerConfigApplication<server-config>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.lcwd.server.config.serverconfig.ServerConfigApplication",
+            "projectName": "server-config",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }

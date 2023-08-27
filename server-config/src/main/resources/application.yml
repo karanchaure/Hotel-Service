@@ -1,0 +1,22 @@
+server:
+    port: 9095
+
+spring:
+  application:
+    name: SERVER-CONFIG
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/karanchaure/Hotel-Service-Config
+          cloneOnStart: true
+
+eureka:
+  instance : 
+    prefer-ip-address: true
+  client:
+    # fetch-registry: true
+    # register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://localhost:9090/eureka
+                    
