@@ -1,5 +1,7 @@
 package com.lcwd.user.service.userservice.config.interceptor;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.oauth2.client.OAuth2AuthorizeRequest;
@@ -14,6 +16,7 @@ import feign.RequestTemplate;
 public class UserFeignClientInterceptor implements RequestInterceptor {
     @Autowired
     private OAuth2AuthorizedClientManager manager;
+    private Logger log = LoggerFactory.getLogger(UserFeignClientInterceptor.class);
 
     @Override
     public void apply(RequestTemplate template) {
@@ -21,6 +24,7 @@ public class UserFeignClientInterceptor implements RequestInterceptor {
                 OAuth2AuthorizeRequest.withClientRegistrationId("my-internal-client").principal("internal").build())
                 .getAccessToken().getTokenValue();
         template.header("Authorization", "Bearer" + tokenValue);
+        log.info("Headers : {}", template.headers().toString());     
     }
 
 }
