@@ -22,8 +22,22 @@ spring:
   #   active: prod
   jpa:
     database-platform: org.hibernate.community.dialect.SQLiteDialect
-  
-
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://dev-76877737.okta.com/oauth2/default
+      client:
+        registration:
+          my-internal-client: 
+            provider: okta
+            authorization-grant-type: client_credentials
+            scope: internal
+            client-id: 0oab1dsko2mg8zd985d7
+            client-secret: mwFj65SJswKU-6H_o9_DoWhW9pmfhNye8uL1xv56VFTGhU1tDl5MmEqstg23bNTu
+        provider:
+          okta:
+            issuer-uri: https://dev-76877737.okta.com/oauth2/default
 # eureka:
 #   instance : 
 #     prefer-ip-address: true
@@ -80,3 +94,8 @@ resilience4j:
         limit-refresh-period: 4s
         limit-for-period: 2
         timeout-duration: 0s
+#okta config
+okta:
+  oauth2:
+    issuer: https://dev-76877737.okta.com/oauth2/default
+    audience: api://default
