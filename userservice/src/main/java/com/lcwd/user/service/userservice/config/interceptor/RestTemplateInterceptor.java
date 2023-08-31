@@ -24,7 +24,7 @@ public class RestTemplateInterceptor implements ClientHttpRequestInterceptor {
         String tokenValue = manager.authorize(
         OAuth2AuthorizeRequest.withClientRegistrationId("my-internal-client").principal("internal").build())
         .getAccessToken().getTokenValue();
-        request.getHeaders().add("Authorization", "Bearer"+tokenValue);
+        request.getHeaders().add("Authorization", "Bearer "+tokenValue);
         return execution.execute(request, body);
     }
 

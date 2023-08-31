@@ -20,7 +20,7 @@ public class UserFeignClientInterceptor implements RequestInterceptor {
         String tokenValue = manager.authorize(
                 OAuth2AuthorizeRequest.withClientRegistrationId("my-internal-client").principal("internal").build())
                 .getAccessToken().getTokenValue();
-        template.header("Authorization", "Bearer" + tokenValue);
+        template.header("Authorization", "Bearer " + tokenValue);
     }
 
 }

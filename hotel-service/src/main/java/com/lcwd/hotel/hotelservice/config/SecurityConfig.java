@@ -21,4 +21,5 @@ public class SecurityConfig {
                 .jwt();
 
         return security.build();
+    }
 }
